@@ -55,9 +55,3 @@
 - A Gallery of images (you can use a Carousel) for the city.
 - A short video about the city . (you can embed a youtube video , or use a video hosted on your website)
 
-#### "city/AlUla/"
-- Title of city with a catchy phrase.
-- Top Attractions in the city.
-- A brief about the city.
-- A Gallery of images (you can use a Carousel) for the city.
-- A short video about the city . (you can embed a youtube video , or use a video hosted on your website)
