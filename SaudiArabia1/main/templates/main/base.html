@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock %}</title>
+
+ 
+  <script>
+    // Apply saved theme early on <html> to keep it stable across navigations
+    (function(){
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light') {
+          document.documentElement.classList.add('light-mode');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <!-- 2) هنا كل صفحة تضيف CSS الخاص فيها -->
+
+  <!-- 3) الاستجابة للشاشات -->
+  <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+  <!-- 4) المود النهاري دائمًا آخر شيء عشان يغلّب -->
+  <link rel="stylesheet" href="{% static 'css/light.css' %}">
+  {% block extra_css %}{% endblock %}
+
+  <!-- مكتباتك كما هي -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Saudi <span>Tech</span></div>
+
+      <!-- زر القائمة للجوال -->
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">☰</label>
+
+      <!-- القائمة -->
+      <div class="nav-center">
+        <a href="{% url 'main:home_view' %}" class="nav-link active">Home</a>
+        <a href="{% url 'main:vision_view' %}" class="nav-link">Vision</a>
+        <a href="{% url 'main:digital_view' %}" class="nav-link">Digital</a>
+        <a href="{% url 'main:ai_view' %}" class="nav-link">AI</a>
+        <a href="{% url 'main:stats_view' %}" class="nav-link">Stats</a>
+        <a href="{% url 'main:future_view' %}" class="nav-link">Future</a>
+      </div>
+
+      <!-- زر التبديل بين الدارك واللايت -->
+      <div class="mode-toggle">
+        <i data-lucide="sun" class="sun-icon"></i>
+        <button class="dark-toggle" id="modeToggle" title="تبديل الوضع">
+          <span class="circle"></span>
+        </button>
+        <i data-lucide="moon" class="moon-icon"></i>
+      </div>
+    </nav>
+  </header>
+
+  <main data-aos="fade-up" data-aos-duration="1000">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- مكتبة AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    
+    lucide.createIcons();
+  </script>
+
+  <!-- Persist theme across pages -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light') {
+          document.addEventListener('DOMContentLoaded', function(){
+            document.body.classList.add('light-mode');
+            document.documentElement.classList.add('light-mode');
+          });
+        }
+      } catch (e) {}
+    })();
+
+    (function(){
+      var t = document.getElementById('modeToggle');
+      if (t) {
+        t.addEventListener('click', function(){
+          var isLight = document.body.classList.toggle('light-mode');
+          document.documentElement.classList.toggle('light-mode', isLight);
+          try { localStorage.setItem('theme', isLight ? 'light' : 'dark'); } catch (e) {}
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

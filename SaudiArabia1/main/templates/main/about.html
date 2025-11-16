@@ -1,0 +1,42 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Saudi Tech{% endblock %}
+
+{% block content %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Saudi Tech</title>
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+     <link rel="stylesheet" href="{% static 'css/light.css' %}">
+</head>
+<body>
+
+    <section class="about-hero">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="{% static 'images/aboutv.mp4' %}" type="video/mp4">
+        
+        </video>
+
+        <div class="overlay">
+            <h1>About Saudi Tech</h1>
+            <p>
+                In its early years, Saudi Arabia took its first careful steps into the world of technology, relying on simple systems and traditional methods.
+                 Over time, the Kingdom began an ambitious digital transformation journey that reshaped its future. 
+                 With the launch of Vision 2030, technology became a cornerstone for growth, driving progress in artificial intelligence, smart cities, and digital services. Today,
+                  Saudi Arabia stands as a rising technological power — blending heritage with innovation and setting a global example in digital transformation..
+            </p>
+
+            
+        </div>
+    </section>
+
+</body>
+</html>
+{% endblock %}

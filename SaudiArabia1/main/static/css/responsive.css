@@ -1,0 +1,491 @@
+/*ai.css*/
+
+/* للأجهزة المتوسطة (تابلت) */
+@media (max-width: 1024px) {
+  .ai-section {
+    flex-direction: column;
+    gap: 40px;
+    padding: 80px 20px;
+  }
+
+  .bot-head {
+    width: 180px;
+    height: 180px;
+  }
+
+  .ai-text h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .ai-text p {
+    text-align: center;
+    font-size: 17px;
+    max-width: 90%;
+  }
+
+  .ai-projects {
+    width: 100%;
+    gap: 30px;
+  }
+
+  .project-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+  }
+
+  .project-card img {
+    margin: 0 0 20px 0;
+    width: 80%;
+    height: auto;
+  }
+
+  .project-text h3 {
+    font-size: 22px;
+  }
+
+  .project-text p {
+    font-size: 16px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* للجوال الصغير */
+@media (max-width: 768px) {
+  .ai-section {
+    flex-direction: column;
+    gap: 30px;
+    padding: 60px 15px;
+  }
+
+  .bot-head {
+    width: 150px;
+    height: 150px;
+  }
+
+  .ai-text h2 {
+    font-size: 26px;
+  }
+
+  .ai-text p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .project-card {
+    flex-direction: column;
+    padding: 20px;
+    width: 95%;
+  }
+
+  .project-card img {
+    width: 100%;
+    height: 160px;
+  }
+
+  .project-text h3 {
+    font-size: 20px;
+  }
+
+  .project-text p {
+    font-size: 15px;
+  }
+
+  .ai-projects {
+    gap: 25px;
+    padding-bottom: 60px;
+  }
+}
+
+
+/*stats.css*/
+
+/* للتابلت */
+@media (max-width: 1024px) {
+  .stats-section {
+    padding: 120px 30px 140px;
+    text-align: center;
+  }
+
+  .stats-title {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  .stats-subtitle {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 50px; 
+  }
+
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .chart-container {
+    width: 100%;
+    max-width: 700px;
+    padding: 25px;
+  }
+
+  .stats-info {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .info-box {
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+  }
+
+  .info-number {
+    font-size: 20px;
+  }
+}
+
+/* للجوال */
+@media (max-width: 768px) {
+  .stats-section {
+    padding: 100px 20px 120px;
+    text-align: center;
+  }
+
+  .stats-title {
+    font-size: 30px;
+    line-height: 1.3;
+    margin-bottom: 8px; /* 🔹 قرب العنوان من الأعلى */
+  }
+
+  .stats-subtitle {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 45px; /* ✅ مساحة بين النص والرسم البياني */
+    padding: 0 10px;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .chart-container {
+    width: 100%;
+    min-width: unset;
+    padding: 20px;
+  }
+
+  .stats-info {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .info-box {
+    padding: 18px;
+    text-align: center;
+  }
+
+  .info-number {
+    display: block;
+    margin: 0 auto 10px auto;
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  /* حاوية الرسم */
+  .chart-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(127, 255, 212, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* العنصر نفسه */
+  canvas#techChart {
+    width: 100% !important;  
+    height: auto !important;  
+    max-height: 300px;        
+  }
+
+  /* تعديل النصوص داخل الرسم */
+  .chartjs-render-monitor {
+    transform: scale(1.05); /* يوضح النصوص */
+  }
+}
+
+/* 📱 للهواتف الصغيرة جدًا (أقل من 480px) */
+@media (max-width: 480px) {
+  canvas#techChart {
+    max-height: 260px;
+    transform: scale(1.1);
+  }
+}
+
+
+/*vision.css*/
+@media (max-width: 768px) {
+  .vision-timeline-section {
+    padding: 140px 20px 120px;
+    position: relative;
+    overflow: visible;
+  }
+
+  .vision-title {
+    font-size: 28px;
+    color: #7fffd4;
+    text-shadow: 0 0 15px #7fffd4, 0 0 30px #00ffc3;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .vision-subtitle {
+    font-size: 15px;
+    margin-bottom: 60px;
+    color: #ccc;
+    text-align: center;
+  }
+
+  /* الحاوية العامة */
+  .timeline-container {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 120px;
+  }
+
+  /* الخط العمودي */
+  .timeline-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, #00ffc3, #7fffd4, #00ffc3);
+    box-shadow: 0 0 15px #00ffc3;
+    z-index: 0;
+  }
+
+  /* كل عنصر */
+  .timeline-item {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+  }
+
+  /* المربع النصي */
+  .year-info {
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    padding: 18px;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(0, 255, 195, 0.3);
+    width: 45%;
+    text-align: left;
+  }
+
+  .year-info h3 {
+    color: #7fffd4;
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+
+  .year-info p {
+    font-size: 14px;
+    color: #ddd;
+    line-height: 1.7;
+  }
+
+  /* الدائرة */
+  .year-circle {
+    background: rgba(255, 255, 255, 0.05);
+    border: 3px solid #7fffd4;
+    box-shadow: 0 0 25px #00ffc3;
+    color: #7fffd4;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 5;
+  }
+
+  /* كل ثاني عنصر يعكس الاتجاه */
+  .timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+
+
+/* style.css */
+
+/* أيقونة القائمة */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  color: #7fffd4;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* إخفاء الـ checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* للجوال */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    z-index: 1100;
+    transition: transform 0.3s ease;
+  }
+
+  /* تغيير شكل الأيقونة لما تنفتح القائمة */
+  #menu-toggle:checked + .menu-icon {
+    transform: rotate(90deg);
+  }
+
+  .nav-center {
+    display: none;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    width: 100%;
+    max-width: 320px;
+    margin-top: 60px;
+    padding: 15px 0;
+    text-align: center;
+    gap: 10px;
+    box-shadow: 0 0 20px rgba(127, 255, 212, 0.25);
+    animation: slideDown 0.4s ease;
+  }
+
+  /* عرض القائمة عند تفعيل الزر */
+  #menu-toggle:checked + .menu-icon + .nav-center {
+    display: flex;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .nav-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #7fffd4;
+  }
+
+  .mode-btn {
+    align-self: center;
+    margin-top: 10px;
+  }
+
+  /* حركة انسيابية عند الظهور */
+  @keyframes slideDown {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* about.css */
+
+
+
+@media (max-width: 768px) {
+ 
+  .about-hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: visible; 
+    margin-top: 90px; 
+  }
+
+  .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+
+  .overlay {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 80px 20px 100px; /* مساحة مريحة فوق وتحت */
+    text-align: center;
+  }
+
+  .overlay h1 {
+    font-size: 26px;
+    line-height: 1.4;
+    color: #7fffd4;
+    text-shadow: 0 0 10px #7fffd4, 0 0 20px #00fff7;
+    margin-bottom: 15px;
+  }
+
+  .overlay p {
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+ 
+  html, body {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    height: auto !important;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+  }
+}

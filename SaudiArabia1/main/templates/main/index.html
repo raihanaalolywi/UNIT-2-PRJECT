@@ -1,0 +1,45 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Saudi Tech{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- ✨ الصفحة الرئيسية -->
+<section class="index-hero-section" id="hero">
+  <div class="index-hero-overlay" data-aos="fade-right">
+    <div class="index-hero-text">
+      <h3 data-aos="fade-up">Welcome to</h3>
+      <h1 data-aos="fade-up" data-aos-delay="300"><span>Saudi</span> Tech</h1>
+      <p data-aos="fade-up" data-aos-delay="600">
+        Discover Saudi Arabia’s journey toward a smarter, more connected future — powered by creativity, innovation, and artificial intelligence.
+        From digital transformation to groundbreaking innovation, the Kingdom is building a future where technology connects people, inspires progress, and drives Vision 2030 forward.
+      </p>
+      <a href="{% url 'main:about_view' %}" class="index-explore-btn" data-aos="zoom-in" data-aos-delay="900">
+        About SA
+      </a>
+    </div>
+  </div>
+
+  <!-- 🌌 الصورة الخلفية -->
+  <div class="index-hero-image" data-aos="fade-left" data-aos-delay="400">
+    <img src="{% static 'images/homepdark.jpeg' %}" alt="Saudi Tech" class="index-hero-bg">
+  </div>
+</section>
+
+<!-- ⚙️ مكتبة التأثيرات -->
+<script>
+  AOS.init({ duration: 1200, once: true });
+  VANTA.WAVES({
+    el: "#hero",
+    color: 0x1b1b3a,
+    shininess: 50,
+    waveHeight: 25,
+    waveSpeed: 1.1,
+    zoom: 0.9
+  });
+</script>
+{% endblock %}

@@ -1,0 +1,92 @@
+html, body {
+  height: auto !important;
+  overflow-y: auto !important;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+
+
+.stats-section {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: white;
+  padding: 100px 50px 160px; 
+  min-height: auto; 
+  text-align: center;
+  overflow: visible; 
+}
+
+
+.stats-title {
+  font-size: 42px;
+  color: #7fffd4;
+  text-shadow: 0 0 15px #7fffd4, 0 0 30px #00ffc3;
+  margin-bottom: 10px;
+}
+
+.stats-subtitle {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 60px;
+}
+
+
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+
+.chart-container {
+  flex: 1;
+  min-width: 500px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 25px rgba(0, 255, 200, 0.2);
+  overflow: hidden; /* 🔹 يمنع أي تمدد داخلي */
+}
+
+
+.stats-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 0.6;
+}
+
+.info-box {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 0 15px rgba(127, 255, 212, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(127, 255, 212, 0.4);
+}
+
+
+.info-number {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: bold;
+  color: #7fffd4;
+  background: rgba(255, 126, 179, 0.2);
+  border-radius: 10px;
+  padding: 5px 12px;
+  margin-bottom: 10px;
+}
+
+html, body {
+  height: auto !important;
+  overflow-y: auto !important;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,44 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Digital Transformation{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/digital.css' %}">
+ <link rel="stylesheet" href="{% static 'css/light.css' %}">
+<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+<section class="digital-cards-section">
+  <h2 class="digital-title" data-aos="fade-up">Saudi Digital Transformation</h2>
+  <p class="digital-subtitle" data-aos="fade-up" data-aos-delay="150">
+    Explore the Kingdom’s journey through technology, innovation, and cybersecurity shaping Vision 2030.
+  </p>
+
+  <div class="digital-card-container">
+    <div class="digital-card" data-aos="zoom-in">
+      <div class="card-img">
+        <img src="{% static 'images/digitalvision.jpeg' %}" alt="Digital Vision">
+      </div>
+      <h3>Digital Vision</h3>
+      <p>Saudi Arabia’s Digital Vision drives innovation, creativity, and transformation toward a knowledge-based economy.</p>
+    </div>
+
+    <div class="digital-card" data-aos="zoom-in" data-aos-delay="200">
+      <div class="card-img">
+        <img src="{% static 'images/smartcities.jpeg' %}" alt="Smart Cities">
+      </div>
+      <h3>Smart Cities</h3>
+      <p>Smart Cities reshape urban life with sustainable solutions and AI-powered technologies for the future.</p>
+    </div>
+
+    <div class="digital-card" data-aos="zoom-in" data-aos-delay="400">
+      <div class="card-img">
+        <img src="{% static 'images/Cybersecurity.jpeg' %}" alt="Cybersecurity">
+      </div>
+      <h3>Cybersecurity</h3>
+      <p>Cybersecurity ensures safety and trust in every digital transformation across the Kingdom’s innovations.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}

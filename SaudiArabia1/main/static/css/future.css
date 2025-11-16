@@ -1,0 +1,269 @@
+/* 🌌 الجسم العام */
+body {
+  margin: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: "Phudu", sans-serif;
+}
+
+/* قسم المستقبل */
+.future-section {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: white;
+  padding: 140px 40px 120px; /* ✅ توازن أفضل بين الأعلى والأسفل */
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* العنوان الرئيسي */
+.future-title {
+  font-size: 42px;
+  color: #7fffd4;
+  text-shadow: 0 0 15px #7fffd4, 0 0 30px #00ffc3;
+  margin-bottom: 15px;
+}
+
+/* العنوان الفرعي */
+.future-subtitle {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 70px;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+/* الحاوية العامة */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding-bottom: 100px;
+}
+
+/* تصميم البطاقة */
+.card {
+  position: relative;
+  width: 500px;
+  height: 230px;
+  padding: 15px;
+  background: linear-gradient(60deg, #151516 0%, #1d2229 100%);
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease;
+}
+
+/* عنوان البطاقة */
+.card h2 {
+  z-index: 2;
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #7fffd4;
+  transition: 0.3s ease;
+  text-align: right;
+  line-height: 1.4;
+}
+
+/* نص البطاقة */
+.card p {
+  z-index: 2;
+  position: absolute;
+  top: 90px;
+  right: 35px;
+  width: 330px;
+  color: #f5f5f5;
+  opacity: 0;
+  font-size: 15px;
+  text-align: right;
+  letter-spacing: 0.5px;
+  line-height: 1.7;
+  transition: 0.3s ease;
+  font-family: "Phudu", sans-serif;
+  text-shadow:
+    -1px -1px 2px #000,
+     1px -1px 2px #000,
+    -1px  1px 2px #000,
+     1px  1px 2px #000;
+}
+
+/* النص العمودي */
+.card span {
+  z-index: 2;
+  position: absolute;
+  top: 60px;
+  right: 35px;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 1px;
+  writing-mode: vertical-lr;
+  opacity: 0.7;
+  transition: 0.3s ease;
+}
+
+/* صورة البطاقة */
+.card .pic {
+  z-index: 1;
+  width: 395px;
+  height: 200px;
+  background-size: cover;
+  border-radius: 12px;
+  filter: grayscale(100%);
+  transition: 0.3s ease;
+}
+
+/* الزر داخل البطاقة */
+.card button {
+  position: absolute;
+  right: 30px;
+  bottom: 40px;
+  width: 30px;
+  height: 30px;
+  background-color: #7fffd4;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+/* تأثيرات عند التمرير */
+.card:hover button {
+  transform: scale(16.5);
+  opacity: 0.4;
+}
+
+.card:hover h2 {
+  color: #7fffd4;
+}
+
+.card:hover p {
+  opacity: 1;
+  right: 40px;
+}
+
+.card:hover span {
+  opacity: 0;
+  top: 80px;
+}
+
+.card:hover .pic {
+  filter: grayscale(0);
+  width: 470px;
+}
+
+/* البطاقة الثانية */
+.card2 button {
+  background-color: #ff7eb3;
+}
+
+/* 🌟 تأثير لمس الجوال لمحاكاة hover */
+@media (hover: none) and (pointer: coarse) {
+  .card:active,
+  .card:focus {
+    transform: scale(1.02);
+  }
+
+  .card:active button,
+  .card:focus button {
+    transform: scale(16.5);
+    opacity: 0.4;
+  }
+
+  .card:active p,
+  .card:focus p {
+    opacity: 1;
+    right: 40px;
+  }
+
+  .card:active .pic,
+  .card:focus .pic {
+    filter: grayscale(0);
+    width: 470px;
+  }
+
+  .card:active span,
+  .card:focus span {
+    opacity: 0;
+    top: 80px;
+  }
+}
+
+/* 🎯 تصميم الجوال */
+@media (max-width: 768px) {
+  .future-section {
+    padding-top: 240px; /* ✅ يبعد عن الشريط العلوي */
+    padding-bottom: 100px;
+  }
+
+  .future-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .future-subtitle {
+    font-size: 15px;
+    line-height: 1.8;
+    width: 90%;
+    margin: 0 auto 50px auto;
+    color: #ddd;
+  }
+
+  /* البطاقات */
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .card {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .card h2 {
+    position: relative;
+    top: 0;
+    right: 0;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .card p {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 1;
+    font-size: 14px;
+    line-height: 1.8;
+    padding: 0 12px;
+    margin-bottom: 15px;
+  }
+
+  .card span {
+    display: none;
+  }
+
+  .card .pic {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin: 10px auto 15px auto;
+    border-radius: 12px;
+    filter: grayscale(0); /* ✅ تبقى ملونة بالجوال */
+  }
+
+  .card button {
+    display: none; /* ✅ يخفي الزر بالجوال */
+  }
+}

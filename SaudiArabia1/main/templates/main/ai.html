@@ -1,0 +1,73 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}AI-BOT{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/ai.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="ai-section">
+  <div class="ai-bot" data-aos="fade-right">
+    <div class="bot-head">
+      <div class="ear left-ear"></div>
+      <div class="ear right-ear"></div>
+      <div class="top-lines">
+        <div></div>
+        <div></div>
+      </div>
+      <div class="eyes">
+        <div class="eye left-eye"></div>
+        <div class="eye right-eye"></div>
+      </div>
+      <div class="mouth"></div>
+    </div>
+  </div>
+
+  <div class="ai-text" data-aos="fade-left" data-aos-delay="200">
+    <h2>AI IN SAUDI ARABIA </h2>
+    <p>
+        Saudi Arabia is rapidly embracing artificial intelligence (AI) to drive innovation 
+        and economic growth. The government has launched initiatives like the National 
+        Strategy for Data and AI, aiming to position the country as a global leader in AI 
+        by 2030. Key sectors benefiting from AI include healthcare, smart cities, finance, 
+        and education, with significant investments in research and development to foster 
+        a thriving AI ecosystem.
+    </p>
+  </div>
+</section>
+
+<!-- 🔹 قسم البطاقات -->
+<section class="ai-projects">
+  <div class="project-card" data-aos="fade-up">
+    <img src="{% static 'images/aihealth.jpeg' %}" alt="AI in Healthcare">
+    <div class="project-text">
+      <h3>AI in Healthcare</h3>
+      <p>
+        **Artificial intelligence in medical devices across Saudi hospitals** is rapidly advancing, transforming healthcare quality and efficiency.
+         AI is used for **medical imaging analysis, early disease detection, and remote patient monitoring**.
+         Smart systems also assist in **managing electronic health records and predicting emergencies** before they occur.
+         The **Ministry of Health and SDAIA** are expanding AI adoption to enhance accuracy and reduce medical errors.
+         Saudi Arabia is becoming a **leader in integrating AI technologies into its healthcare system** for safer and smarter medical care.
+
+      </p>
+    </div>
+  </div>
+
+  <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+    <img src="{% static 'images/Educationai.jpeg' %}" alt="Education ai">
+    <div class="project-text">
+      <h3>Artificial Intelligence in Education</h3>
+      <p>
+        Education in Saudi Arabia is undergoing a major transformation through artificial intelligence, which personalizes the learning experience for each student.
+        AI systems help analyze student performance and provide instant feedback to teachers.
+        They are also used in remote learning to create more interactive and effective environments.
+        The Ministry of Education aims to integrate AI into curricula and enhance students’ technical skills.
+        Thus, Saudi education is becoming more innovative and future-oriented, preparing the next generation for success.
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Future of Saudi Tech{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/future.css' %}">
+ <link rel="stylesheet" href="{% static 'css/light.css' %}">
+
+<section class="future-section">
+  <h2 class="future-title" data-aos="fade-up">The Future of Saudi Tech</h2>
+  <p class="future-subtitle" data-aos="fade-up" data-aos-delay="150">
+    Exploring Saudi Arabia’s futuristic projects — NEOM’s The Line and the rise of cloud transformation shaping Vision 2035.
+  </p>
+
+  <div class="container">
+    <!-- 🏙️ بطاقة NEOM - The Line -->
+    <div class="card" data-aos="zoom-in">
+      <h2>NEOM – The Line</h2>
+      <p>A revolutionary linear city redefining urban life — powered by AI, renewable energy, and advanced tech infrastructure.</p>
+      <span>Hover here</span>
+      <img src="{% static 'images/neom.jpeg' %}" alt="neom image" class="pic">
+      <button></button>
+    </div>
+
+    <!-- ☁️ بطاقة Cloud Transformation -->
+    <div class="card card2" data-aos="zoom-in" data-aos-delay="200">
+      <h2>Cloud & Digital Shift</h2>
+      <p>Saudi Arabia’s vision embraces a cloud-first economy — driving digital transformation and secure smart infrastructure.</p>
+      <span>Hover here</span>
+      <img src="{% static 'images/cloud.jpeg' %}" alt="cloud image" class="pic">
+      <button></button>
+    </div>
+  </div>
+</section>
+{% endblock %}

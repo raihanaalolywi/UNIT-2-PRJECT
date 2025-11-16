@@ -1,0 +1,90 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Saudi Tech{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/stats.css' %}">
+<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+ <link rel="stylesheet" href="{% static 'css/light.css' %}">
+
+<section class="stats-section">
+  <h2 class="stats-title" data-aos="fade-up">Saudi Tech Growth Statistics</h2>
+  <p class="stats-subtitle" data-aos="fade-up" data-aos-delay="150">
+    Tracking Saudi Arabia’s digital economy growth — investments, startups, and tech GDP share from 2018 to 2030.
+  </p>
+
+  <div class="stats-container">
+    <!-- الرسم البياني -->
+    <div class="chart-container" data-aos="zoom-in">
+      <canvas id="techChart"></canvas>
+    </div>
+
+    <!-- معلومات البطاقة  للرسم البياني -->
+    <div class="stats-info">
+      <div class="info-box" data-aos="fade-left" data-aos-delay="200">
+        <span class="info-number">01</span>
+        <p><strong>Tech Investments:</strong> From 2 billion SAR in 2018 to 24 billion SAR in 2023 — projected to exceed 100 billion by 2030.</p>
+      </div>
+      <div class="info-box" data-aos="fade-left" data-aos-delay="400">
+        <span class="info-number">02</span>
+        <p><strong>Startups Growth:</strong> Over 1500 tech startups in 2024 compared to just 200 in 2018, boosting local innovation.</p>
+      </div>
+      <div class="info-box" data-aos="fade-left" data-aos-delay="600">
+        <span class="info-number">03</span>
+        <p><strong>GDP Contribution:</strong> The digital economy contributes around 15% of GDP today — aiming for 20% by 2030.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- مكتبة الرسم البياني -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+const ctx = document.getElementById('techChart').getContext('2d');
+const techChart = new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['2018', '2020', '2022', '2024', '2026', '2028', '2030'],
+    datasets: [{
+      label: 'Tech Sector Growth (Billion SAR)',
+      data: [2, 6, 14, 24, 45, 70, 100],
+      backgroundColor: [
+        'rgba(127, 255, 212, 0.8)',
+        'rgba(255, 126, 179, 0.8)',
+        'rgba(127, 255, 212, 0.8)',
+        'rgba(255, 126, 179, 0.8)',
+        'rgba(127, 255, 212, 0.8)',
+        'rgba(255, 126, 179, 0.8)',
+        'rgba(127, 255, 212, 0.8)'
+      ],
+      borderRadius: 10
+    }]
+  },
+  options: {
+    locale: 'en-US',
+    responsive: true,
+    scales: {
+      x: {
+        ticks: { color: '#fff' },
+        grid: { color: 'rgba(255,255,255,0.1)' }
+      },
+      y: {
+        ticks: { color: '#fff' },
+        grid: { color: 'rgba(255,255,255,0.1)' },
+        title: {
+          display: true,
+          text: 'Billion SAR',
+          color: '#7fffd4'
+        }
+      }
+    },
+    plugins: {
+      legend: { labels: { color: '#7fffd4' } }
+    }
+  }
+});
+</script>
+{% endblock %}

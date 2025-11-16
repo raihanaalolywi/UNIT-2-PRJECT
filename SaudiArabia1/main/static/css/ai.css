@@ -1,0 +1,183 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at center, #0f0c29, #302b63, #24243e);
+  font-family: "Phudu", sans-serif;
+  color: white;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* 📦 القسم الرئيسي */
+.ai-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  padding: 100px 40px 60px; /* قللنا التباعد السفلي */
+  min-height: 100vh;
+}
+
+/* 🤖 الرأس */
+.bot-head {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle at center, #111 60%, #000);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 60px #00ffc3;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* 🟣 الأذنين */
+.ear {
+  position: absolute;
+  top: 50%;
+  width: 25px;
+  height: 70px;
+  background: #fff;
+  border-radius: 12px;
+  transform: translateY(-50%);
+}
+
+.left-ear { left: -25px; }
+.right-ear { right: -25px; }
+
+/* 🔹 الخطوط العلوية */
+.top-lines {
+  position: absolute;
+  top: -15px;
+  display: flex;
+  gap: 10px;
+}
+
+.top-lines div {
+  width: 35px;
+  height: 10px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+/* 👀 العيون */
+.eyes {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+}
+
+.eye {
+  width: 50px;
+  height: 60px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #e498ff, #76ffff);
+  box-shadow: 0 0 25px #00ffc3;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+/* 😄 الفم */
+.mouth {
+  position: absolute;
+  bottom: 40px;
+  width: 60px;
+  height: 15px;
+  border-radius: 10px;
+  background: #7fffd4;
+  box-shadow: 0 0 20px #00ffc3;
+  animation: talk 2s ease-in-out infinite;
+}
+
+/* 💬 النص */
+.ai-text h2 {
+  color: #7fffd4;
+  text-shadow: 0 0 15px #7fffd4, 0 0 30px #00ffc3;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.ai-text p {
+  font-size: 18px;
+  color: #ddd;
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+/* 💡 قسم البطاقات */
+.ai-projects {
+  margin-top: 40px; /* قربناها للروبوت */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px; /* قللنا المسافة بين البطاقات */
+  padding-bottom: 100px;
+}
+
+.project-card {
+  display: flex;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(127, 255, 212, 0.15);
+  width: 90%;
+  max-width: 1000px;
+  min-height: 220px; /* زودنا الطول */
+  padding: 35px;
+  transition: 0.4s ease;
+  backdrop-filter: blur(6px);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(127, 255, 212, 0.3);
+}
+
+/* 🖼️ الصور */
+.project-card img {
+  width: 220px; /* كبرنا الصورة */
+  height: 150px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-right: 30px;
+  box-shadow: none; /* أزلنا التوهج */
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.02);
+}
+
+/* النص داخل البطاقة */
+.project-text h3 {
+  color: #7fffd4;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.project-text p {
+  color: #ddd;
+  line-height: 1.8;
+  font-size: 17px;
+  max-width: 650px;
+}
+
+/* 🔄 الحركات */
+@keyframes talk {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.4); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 20px #ffbdf3; }
+  100% { box-shadow: 0 0 30px #00ffc3; }
+}
+
+
+
+
